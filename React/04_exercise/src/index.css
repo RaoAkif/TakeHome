@@ -1,0 +1,28 @@
+ul {
+  width: 300px;
+  padding-left: 0;
+}
+
+ul > li {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.deleteButton {
+  color: #0075FF;
+}
+
+.deleteButton:hover {
+  color: red;
+}
+
+.todo-style {
+  width: 200px;
+  font-size: 25px;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
