@@ -27,7 +27,7 @@ const Content = () => {
 
   return (
     <div style={contentStyle}>
-      <p style={unSelectable} onDoubleClick={() => handleNameChange()}>Hello {name} 👋</p>
+      <h1 style={unSelectable} onDoubleClick={() => handleNameChange()}>Hello {name} 👋</h1>
     </div>
   )
 }
