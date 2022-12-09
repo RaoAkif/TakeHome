@@ -56,15 +56,19 @@ const Content = () => {
 
   return (
     <div style={contentStyle}>
-      <ul>
-        {todos.map(todo => (
-          <li key={todo.id}>
-            <input style={checkboxStyle} onChange={() => handleCheck(todo.id)} type="checkbox" checked={todo.checked} />
-            <p className='todo-style' style={(todo.checked) ? {textDecoration: 'line-through'} : null} onDoubleClick={() => handleCheck(todo.id)}>{todo.text}</p>
-            <MdDelete type='button' className='deleteButton' style={deleteButtonStyle} onClick={() => handleDelete(todo.id)} />
-          </li>
-        ))}
-      </ul>
+      {
+        todos.length === 0 ? (<h2>There is no work to do</h2>)
+        :
+        (<ul>
+          {todos.map(todo => (
+            <li key={todo.id}>
+              <input style={checkboxStyle} onChange={() => handleCheck(todo.id)} type="checkbox" checked={todo.checked} />
+              <p className='todo-style' style={(todo.checked) ? {textDecoration: 'line-through'} : null} onDoubleClick={() => handleCheck(todo.id)}>{todo.text}</p>
+              <MdDelete type='button' className='deleteButton' style={deleteButtonStyle} onClick={() => handleDelete(todo.id)} />
+            </li>
+          ))}
+        </ul>)
+      }
     </div>
   )
 }
